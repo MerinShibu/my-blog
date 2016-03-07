@@ -22,9 +22,9 @@ $app->get('/', function() use($app) {
   return $app['twig']->render('index.twig');
 });
 
-$app->get('/posts/{name}/', function($name) use($app) {
-    $app['monolog']->addDebug('posts/' . $name . '.twig');
-    return $app['twig']->render('posts/' . $name . '.twig');
+$app->get('/post/{name}/', function($name) use($app) {
+    $app['monolog']->addDebug('post/' . $name . '.twig');
+    return $app['twig']->render('post/' . $name . '.twig');
 });
 
 $app->run();
